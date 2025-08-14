@@ -1,0 +1,19 @@
+{% comment %}
+  Template: page.informative.liquid
+  Purpose: Custom page template for informative content (cloned product pages)
+  Usage: Assign this template to pages that should display informative content without e-commerce functionality
+{% endcomment %}
+
+{% layout 'theme' %}
+
+<div class="informative-page-wrapper">
+  {% section 'informative-content' %}
+</div>
+
+{% comment %}
+  Load custom CSS for informative pages
+  Note: This assumes your theme supports asset_url filter
+{% endcomment %}
+<style>
+  {{ 'informative-style.css' | asset_url | stylesheet_tag }}
+</style>
